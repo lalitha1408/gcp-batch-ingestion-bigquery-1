@@ -11,8 +11,8 @@ provider "google" {
   region = "australia-southeast1-a"
 }
 
-resource "google_storage_bucket" "funky-bucket" {
-  name = "batch-pipeline"
+resource "google_storage_bucket" "funky-buckets" {
+  name = "batch-pipelinefirst"
   storage_class = "REGIONAL"
   location  = "australia-southeast1"
 }
