@@ -1,14 +1,5 @@
-terraform {
-  backend "gcs" {
-    bucket = "tf-state-gcp-batch-ingestion"
-    region = "australia-southeast1-a"
-    prefix = "terraform/state"
-  }
-}
-
 provider "google" {
-  project = "grey-sort-challenge"
-  region = "australia-southeast1-a"
+  project = "ind-coe"
 }
 
 resource "google_storage_bucket" "funky-buckets" {
