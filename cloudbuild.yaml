@@ -1,7 +1,7 @@
 steps:
 # 1. Fetch the source code
 - name: gcr.io/cloud-builders/git
-  args: ['clone', 'https://github.com/polleyg/gcp-batch-ingestion-bigquery.git']
+  args: ['clone', 'https://github.com/padmasri-jampana/gcp-batch-ingestion-bigquery-1']
 
 # 2a. Set up GCS & BQ etc. using public terraform Docker image
 - name: hashicorp/terraform
@@ -29,7 +29,7 @@ steps:
 # 4b. Deploy the Cloud Function that listens to the bucket
 - name: gcr.io/cloud-builders/gcloud
   id: function-deploy
-  args: ['functions', 'deploy', 'goWithTheDataFlow', '--stage-bucket=gs://batch-pipeline', '--trigger-bucket=gs://batch-pipeline']
+  args: ['functions', 'deploy', 'goWithTheDataFlow', '--stage-bucket=gs://batch-pipelineone', '--trigger-bucket=gs://batch-pipelineone']
   dir: 'cloud-function'
   waitFor: ['npm-install-test']
 
