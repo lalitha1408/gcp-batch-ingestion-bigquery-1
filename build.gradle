@@ -27,9 +27,9 @@ run {
             "--maxNumWorkers=5",
             "--numWorkers=1",
             "--zone=us-central1",
-            "--stagingLocation=gs://batch-pipeline/jars",
-            "--tempLocation=gs://batch-pipeline/tmp",
-            "--templateLocation=gs://batch-pipeline/template/pipeline"
+            "--stagingLocation=gs://batch-pipelineone/jars",
+            "--tempLocation=gs://batch-pipelineone/tmp",
+            "--templateLocation=gs://batch-pipelineone/template/pipeline"
     ]
 }
 
